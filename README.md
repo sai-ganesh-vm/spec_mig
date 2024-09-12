@@ -18,7 +18,7 @@ Stores metadata about datasets in GCP, similar to AWS Glue Data Catalog.<br>
 <b> ETL Pipeline Migration</b>: Migrate AWS Glue ETL jobs to Cloud Dataflow and Cloud Data Fusion.<br>
 <b> Metadata Migration</b>: Migrate AWS Glue Data Catalog metadata to Google Data Catalog.<br>
 ## 1.data migration from aws s3 to GCS :<br>
-List all data files in Amazon S3 that are being used by Athena and identify which format they are being stored <br>
+List all data files in Amazon S3 that are being used by Athena adn Glue and identify which format they are being stored <br>
 now create gcs bucket in google cloud platform .<br>
 Use `gsutil` to copy data from S3 to GCS. by using gsutil you can transfer data of s3 to gcs<br>
 ```
@@ -28,10 +28,33 @@ After the migration, verify that all files have been copied correctly and check 
 ## 2.Migrating AWS Athena Queries to Google BigQuery:
 <b>Goal:</b> Migrate your SQL queries from AWS Athena to Google BigQuery, which is GCP's fully managed analytics data warehouse.<br>
 <br>
-identify all the query in athena,tables,databases,and data sources involved<br>
+identify and document all the query in athena,tables,databases,and data sources involved<br>
 Create BigQuery datasets that mirror the structure of the data in S3<br>
 create a bigquery tables using schema of the data stored in GCS. You can manually define tables or use schema inference from GCS files.<br>
+Athena and BigQuery use SQL, but there are some differences in syntax and functions. Review and adjust queries as needed<br>
+<br>
+##3.Migrating AWS Glue ETL Pipelines:
+<br>
+Identify Glue ETL jobs, including the source (S3), transformations, and target destinations.<br>
+Rewrite the ETL logic using Apache Beam, which is supported by Cloud Dataflow.<br>
+<br>
+<b> example beam pipeline </b>
+```
+import apache_beam as beam
 
+def process(row):
+    # Transform logic here
+    return row
+
+p = beam.Pipeline()
+
+(p
+  | 'Read from GCS' >> beam.io.ReadFromText('gs://my-data-bucket/input.csv')
+  | 'Transform Data' >> beam.Map(process)
+  | 'Write to GCS' >> beam.io.WriteToText('gs://my-data-bucket/output.csv'))
+
+p.run()
+```
 
 
 

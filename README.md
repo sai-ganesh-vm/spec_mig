@@ -33,7 +33,7 @@ Create BigQuery datasets that mirror the structure of the data in S3<br>
 create a bigquery tables using schema of the data stored in GCS. You can manually define tables or use schema inference from GCS files.<br>
 Athena and BigQuery use SQL, but there are some differences in syntax and functions. Review and adjust queries as needed<br>
 <br>
-##3.Migrating AWS Glue ETL Pipelines:
+## 3.Migrating AWS Glue ETL Pipelines:
 <br>
 Identify Glue ETL jobs, including the source (S3), transformations, and target destinations.<br>
 Rewrite the ETL logic using Apache Beam, which is supported by Cloud Dataflow.<br>

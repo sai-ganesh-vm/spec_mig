@@ -4,8 +4,14 @@ Equivalent of aws Glue in GCP is a combination of Cloud Dataflow, Cloud Data Fus
 ### BIGQUERY:
 A fully managed data warehouse for running serverless SQL queries on structured and semi-structured data.<br>
 it is same as athena but there are some syntax differences<br>
-###
-#### steps to follow <br>
+### Cloud Dataflow:
+A fully managed service for real-time and batch data processing using Apache Beam. It will handle ETL pipelines.<br>
+### Cloud Data Fusion: 
+Visual ETL tool for building and managing data integration pipelines (replaces Glue Studio).<br>
+### Google Data Catalog:
+Stores metadata about datasets in GCP, similar to AWS Glue Data Catalog.<br>
+
+### steps to follow <br>
 <b> Data Migration</b>: Move data from Amazon S3 to Google Cloud Storage (GCS).<br>
 <b> Query Migration</b>: Migrate SQL queries from AWS Athena to Google BigQuery.<br>
 <b> ETL Pipeline Migration<b>: Migrate AWS Glue ETL jobs to Cloud Dataflow and Cloud Data Fusion.<br>
@@ -18,7 +24,7 @@ Use `gsutil` to copy data from S3 to GCS. by using gsutil you can transfer data 
 gsutil -m cp -r s3://<s3-bucket-path>/* gs://<gcs-bucket-path>/
 ```
 After the migration, verify that all files have been copied correctly and check file permissions in GCS.<br>
-#2.Query Migration:
+# 2.Query Migration:
 <b>Goal:</b> Migrate your SQL queries from AWS Athena to Google BigQuery, which is GCP's fully managed analytics data warehouse.
 
 

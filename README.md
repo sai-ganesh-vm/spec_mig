@@ -55,6 +55,14 @@ p = beam.Pipeline()
 
 p.run()
 ```
+Use the gcloud CLI or Dataflow UI to deploy and run the Apache Beam pipelines.<br>
+```
+gcloud dataflow jobs run my-dataflow-job --gcs-location gs://my-template/template.json
+```
+<br>
+Create a Cloud Data Fusion instance from the GCP console.<br>
+Use the visual drag-and-drop interface in Data Fusion to recreate ETL pipelines.<br>
+
 
 
 

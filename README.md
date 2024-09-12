@@ -8,7 +8,7 @@ it is same as athena but there are some syntax differences<br>
 <b> Query Migration</b>: Migrate SQL queries from AWS Athena to Google BigQuery.<br>
 <b> ETL Pipeline Migration<b>: Migrate AWS Glue ETL jobs to Cloud Dataflow and Cloud Data Fusion.<br>
 <b> Metadata Migration</b>: Migrate AWS Glue Data Catalog metadata to Google Data Catalog.<br>
-## data migration:
+## data migration ##:
 List all data files in Amazon S3 that are being used by Athena and identify which format they are being stored <br>
 now create gcs bucket in google cloud platform .<br>
 Use `gsutil` to copy data from S3 to GCS. by using gsutil you can transfer data of s3 to gcs<br>

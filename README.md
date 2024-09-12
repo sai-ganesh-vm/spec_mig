@@ -25,10 +25,12 @@ Use `gsutil` to copy data from S3 to GCS. by using gsutil you can transfer data 
 gsutil -m cp -r s3://<s3-bucket-path>/* gs://<gcs-bucket-path>/
 ```
 After the migration, verify that all files have been copied correctly and check file permissions in GCS.<br>
-# 2.Migrating AWS Athena Queries to Google BigQuery:
+## 2.Migrating AWS Athena Queries to Google BigQuery:
 <b>Goal:</b> Migrate your SQL queries from AWS Athena to Google BigQuery, which is GCP's fully managed analytics data warehouse.<br>
 <br>
 identify all the query in athena,tables,databases,and data sources involved<br>
+Create BigQuery datasets that mirror the structure of the data in S3<br>
+create a bigquery tables using schema of the data stored in GCS. You can manually define tables or use schema inference from GCS files.<br>
 
 
 

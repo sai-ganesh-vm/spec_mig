@@ -3,6 +3,7 @@ Equivalent of AWS Athena in GCP is BigQuery<br>
 ### BIGQUERY:
 A fully managed data warehouse for running serverless SQL queries on structured and semi-structured data.<br>
 it is same as athena but there are some syntax differences<br>
+<br>
 Equivalent of aws Glue in GCP is a combination of Cloud Dataflow, Cloud Data Fusion, and Google Cloud Storage (GCS) <br>
 ### Cloud Dataflow:
 A fully managed service for real-time and batch data processing using Apache Beam. It will handle ETL pipelines.<br>

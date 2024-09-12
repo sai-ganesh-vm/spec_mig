@@ -1,2 +1,2 @@
-<h1>**Athena**<h1>
+**Athena**
 Equivalent of AWS Athena in GCP is BigQuery

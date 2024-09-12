@@ -15,7 +15,7 @@ Stores metadata about datasets in GCP, similar to AWS Glue Data Catalog.<br>
 ### steps to follow <br>
 <b> Data Migration</b>: Move data from Amazon S3 to Google Cloud Storage (GCS).<br>
 <b> Query Migration</b>: Migrate SQL queries from AWS Athena to Google BigQuery.<br>
-<b> ETL Pipeline Migration<b>: Migrate AWS Glue ETL jobs to Cloud Dataflow and Cloud Data Fusion.<br>
+<b> ETL Pipeline Migration</b>: Migrate AWS Glue ETL jobs to Cloud Dataflow and Cloud Data Fusion.<br>
 <b> Metadata Migration</b>: Migrate AWS Glue Data Catalog metadata to Google Data Catalog.<br>
 ## 1.data migration from aws s3 to GCS :<br>
 List all data files in Amazon S3 that are being used by Athena and identify which format they are being stored <br>

@@ -1,8 +1,8 @@
 # Migration from AWS RDS to Google Cloud SQL using Database Migration Service (DMS)
 <br>
-<b>This spec outlines the steps for migrating a PostgreSQL database hosted on AWS RDS (db.t3.micro or db.t3.medium) to Google Cloud SQL PostgreSQL using Google Cloud Database Migration Service (DMS). </b>
+<b>This spec outlines the steps for migrating a PostgreSQL database hosted on AWS RDS (db.t3.micro or db.t3.medium) to Google Cloud SQL PostgreSQL using Google Cloud Database Migration Service (DMS). </b><br>
 <br>
-<b>Cloud SQL is a fully managed relational database service offered by Google Cloud Platform (GCP). It allows you to run and manage popular relational database engines in the cloud without needing to handle the underlying infrastructure. Cloud SQL supports MySQL, PostgreSQL, and SQL Server databases and integrates seamlessly with other Google Cloud services, making it ideal for applications requiring scalable and managed database solutions.</b>
+<b>Cloud SQL is a fully managed relational database service offered by Google Cloud Platform (GCP). It allows you to run and manage popular relational database engines in the cloud without needing to handle the underlying infrastructure. Cloud SQL supports MySQL, PostgreSQL, and SQL Server databases and integrates seamlessly with other Google Cloud services, making it ideal for applications requiring scalable and managed database solutions.</b><br>
 <br>
 Equivalent service of AWS RDS in GCP is Cloud SQL<br>
 <br>

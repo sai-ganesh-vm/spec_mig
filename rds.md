@@ -27,10 +27,16 @@ Whitelist the AWS RDS IP range (public IP or VPC) in the Cloud SQL instance to a
 <br>
 ## 2. Enable Google Cloud Services
 ### enable APIs
-these mentioned apis are required for the migration<br>
+These mentioned apis are required for the migration<br>
 <br>
 Database Migration API<br>
 Cloud SQL Admin API<br>
-Compute Engine API (for networking if needed).<br>
+Compute Engine API (for networking).<br>
+<br>
+
+## 3. Create a Connection Profile for AWS RDS
+
+
+
 
 

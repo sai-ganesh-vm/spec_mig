@@ -49,7 +49,24 @@ Cloud SQL Admin API<br>
 Compute Engine API (for networking).<br>
 <br>
 
-## 3. Create a Connection Profile for AWS RDS
+## 3. Create a Connection Profile for AWS RDS:
+<br>
+In Google Cloud Console, navigate to Database Migration Service.<br>
+<br>
+Click on Create Connection Profile.<br>
+<br>
+Select PostgreSQL as the database type.<br>
+<br>
+Fill in the details for your AWS RDS instance:<br>
+<br>
+Host: Enter the AWS RDS endpoint.<br>
+<br>
+Port: The PostgreSQL port (usually 5432).<br>
+<br>
+Username/Password: Enter the PostgreSQL credentials for a user with sufficient privileges.<br>
+<br>
+SSL Configuration: Enable and upload the SSL certificate if SSL is enabled on your RDS instance.<br>
+<br>
 
 
 

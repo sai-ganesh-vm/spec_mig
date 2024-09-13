@@ -5,6 +5,24 @@
 <br>
 Equivalent service of AWS RDS in GCP is Cloud SQL<br>
 <br>
+The instance used aws are t3.micro and t3.medium so for these instance in GCP we have instance named as e2-micro and e2-medium<br>
+<br>
+| Feature             | AWS RDS      | GCP Cloud SQL  |
+|---------------------|--------------|----------------|
+| Instance (Micro)    | db.t3.micro  | e2-micro       |
+| Instance (Medium)   | db.t3.medium | e2-medium      |
+| Backup Storage Cost | $0.095/GB    | $0.080/GB      |
+|Feature	     |AWS RDS (db.t3.micro/medium)|	Google Cloud SQL (e2-micro/medium)|
+|--------------|----------------------------|-----------------------------------|
+|vCPUs         |	2                         |	2                                 |
+|Memory (GB)   |	1 (micro), 4 (medium)	    |1 (micro), 4 (medium)              |
+|Storage	     |Elastic storage             |	Elastic storage                   |
+Performance	Burstable CPU	Burstable CPU
+Networking	Public/Private	Public/Private
+Automatic Backups	Yes	Yes
+Managed Failover	Yes (Multi-AZ)	Yes (High Availability)
+
+
 
 ## 1. Set Up Google Cloud SQL PostgreSQL Instance
 <br>

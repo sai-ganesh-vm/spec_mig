@@ -10,7 +10,7 @@ Equivalent service of AWS RDS in GCP is Cloud SQL<br>
 <br>
 
 ### Create a Cloud SQL Instance: <br>
-chose the postgre sql as your database type <br>
+choose the postgre sql as your database type <br>
 <br>
 Select the region closest to your source AWS RDS instance to reduce latency during migration.<br>
 <br>
@@ -20,6 +20,10 @@ e2-micro for db.t3.micro.<br>
 e2-medium for db.t3.medium.<br>
 <br>
 Enable public IP or private IP<br>
+<br>
+Modify the security group in AWS RDS to allow inbound traffic from Google Cloud this is necessary for DMS to access your AWS RDS instance.<br>
+<br>
+Whitelist the AWS RDS IP range (public IP or VPC) in the Cloud SQL instance to allow connectivity between the two services.<br>
 <br>
 
 

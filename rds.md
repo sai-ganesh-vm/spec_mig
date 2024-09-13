@@ -18,8 +18,10 @@ The instance used aws are t3.micro and t3.medium so for these instance in GCP we
 |Automatic Backups  |	Yes                        |	Yes                                |
 |Managed Failover   |Yes (Multi-AZ)              |	Yes (High Availability)            |
 |Backup Storage Cost| $0.095/GB                  | $0.080/GB                           |
+<br>
 
-
+<b>
+DMS stands for Database Migration Service. It is a fully managed service provided by cloud platforms to facilitate the migration of databases from on-premises or other cloud environments to their respective cloud environments with minimal downtime. DMS simplifies and automates the migration process, making it easier to move databases while ensuring data integrity and minimal disruption to applications.</b>
 
 ## 1. Set Up Google Cloud SQL PostgreSQL Instance
 <br>
@@ -66,6 +68,43 @@ Port: The PostgreSQL port (usually 5432).<br>
 Username/Password: Enter the PostgreSQL credentials for a user with sufficient privileges.<br>
 <br>
 SSL Configuration: Enable and upload the SSL certificate if SSL is enabled on your RDS instance.<br>
+<br>
+
+## 4.Create a Migration Job:
+<br>
+In the DMS Console, click Create Migration Job.<br>
+<br>
+choose the migration as One-time Migration <br>
+<br>
+<b>Select the Source and Destination:</b>
+<br>
+Source: Choose the connection profile you created for your AWS RDS PostgreSQL instance.<br>
+<br>
+Destination: Select the Cloud SQL PostgreSQL instance you created as the destination.<br>
+<br>
+migrating both schema and data<br>
+<br>
+Run the pre-migration validation to check for potential issues such as unsupported data types, schema problems, or connectivity issues.<br>
+<br>
+
+## 5.Start Migration
+<br>
+Once everything is configured and tested, start the migration job.<br>
+<br>
+Monitor the migration process via the DMS Console.<br>
+<br>
+The migration status will show the progress, including which schemas and tables have been migrated.<br>
+<br>
+When you are ready to switch over, stop all writes to the AWS RDS PostgreSQL instance.<br>
+<br>
+Allow the final sync to complete so that no data is lost in the transition.<br>
+<br>
+
+## 6.Redirect Application Traffic:
+<br>
+Update your application to point to the Google Cloud SQL PostgreSQL instance.<br>
+<br>
+Update any connection strings, IP addresses, and credentials in your application configurations.<br>
 <br>
 
 

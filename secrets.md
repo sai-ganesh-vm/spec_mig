@@ -7,6 +7,7 @@ Applications running in EKS often need access to sensitive data such as database
   AWS Secrets Manager:
 </b> A fully managed service to securely store and retrieve secrets, with automatic rotation and fine-grained access control.<br>
 <br>
+
 ### Using Kubernetes Secrets
 Kubernetes Secrets can be created directly from literal values or from files. Here’s how to create a secret for a database password<br>
 To access the secret in a container as an environment variable, modify the Pod’s (or Deployment’s) manifest<br>

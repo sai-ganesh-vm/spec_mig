@@ -30,3 +30,23 @@ spec:
 ```
 or Alternatively, the secret can be mounted as a file inside the container:
 
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app
+spec:
+  containers:
+    - name: app-container
+      image: my-app-image
+      volumeMounts:
+        - name: secret-volume
+          mountPath: "/etc/secrets"
+          readOnly: true
+    volumes:
+      - name: secret-volume
+        secret:
+          secretName: db-secret
+
+```
+

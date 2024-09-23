@@ -50,4 +50,25 @@ spec:
           secretName: db-secret
 
 ```
+<br>
 
+### aws secret Manager
+For enhanced security, you can store secrets in AWS Secrets Manager and access them inside your Kubernetes Pods. This requires the setup of IAM Roles for Service Accounts (IRSA), allowing your pods to authenticate with AWS and fetch secrets.<br>
+
+you can store secrets in AWS Secrets Manager via the AWS Console<br>
+To allow your Kubernetes Pods to access AWS Secrets Manager, you need to create an IAM role and associate it with a Kubernetes Service Account.<br>
+Step 1: Create IAM Policy<br>
+Create a policy that allows access to your secret in AWS Secrets Manager:<br>
+You can access AWS Secrets Manager directly in your application using AWS SDKs, or you can inject the secret as an environment variable by fetching it using an init container or sidecar container.<br>
+```
+import boto3
+
+def get_secret():
+    client = boto3.client('secretsmanager')
+    secret_name = "my-db-secret"
+    
+    response = client.get_secret_value(SecretId=secret_name)
+    
+    return response['SecretString']
+
+```

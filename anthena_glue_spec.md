@@ -67,6 +67,7 @@ Use the visual drag-and-drop interface in Data Fusion to recreate ETL pipelines.
 <br>
 Use pre-built connectors for reading data from GCS, transforming it, and loading it into BigQuery and test the bigquery.<br>
 <br>
+
 ## 4.Metadata Migration from Glue Data Catalog to Google Data Catalog
 <br>
 <b>goal</b> Migrate the metadata from AWS Glue Data Catalog to Google Data Catalog.
